@@ -10,5 +10,15 @@ const myStr3 = "FirstLine\n\t\\SecondLine\nThirdLine";
 
 //Find the Length of a String
 let lastNameLength = 0;
+const lastName1 = "Lovelace";
+lastNameLength = lastName1.length;
+
+//Use Bracket Notation to Find the First Character in a String
+let firstLetterOfLastName = "";
+const lastName2 = "Lovelace";
+firstLetterOfLastName = lastName2[0];
+
+//Use Bracket Notation to Find the Last Character in a String or Nth-to-last
 const lastName = "Lovelace";
-lastNameLength = lastName.length;
+const lastLetterOfLastName = lastName[lastName.length - 1];
+const secondToLastLetterOfLastName = lastName[lastName.length - 2];
