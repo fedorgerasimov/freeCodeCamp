@@ -85,10 +85,29 @@ console.log(processed);
 //The nextInLine function should then return the element that was removed.
 function nextInLine(arr, item) {
     arr.push(item);
-    let remove = arr.shift();
+    let remove = arr.shift(); // or return arr.shift()
     return remove;
   }
   const testArr = [1, 2, 3, 4, 5];
   console.log("Before: " + JSON.stringify(testArr));
   console.log(nextInLine(testArr, 6));
   console.log("After: " + JSON.stringify(testArr));
+
+  //Use Conditional Logic with If Statements
+  function trueOrFalse(wasThatTrue) {
+    if (wasThatTrue){
+      return "Yes, that was true";
+    }
+    return "No, that was false";
+}
+console.log(trueOrFalse(true));
+
+//Comparison with the Equality Operator
+function testEqual(val) {
+    if (val == 12) { // Change this line
+      return "Equal";
+    }
+    return "Not Equal";
+  }
+console.log(testEqual(12));
+
