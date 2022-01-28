@@ -35,3 +35,41 @@ function functionWithArgs(a, b){
   }
   timesFive(5);
  
+  //Global Scope and Functions // https://forum.freecodecamp.org/t/freecodecamp-challenge-guide-global-scope-and-functions/18193
+const myGlobal = 10;
+function fun1() {
+   oopsGlobal = 5;  // Global scope without let           num1 = 18; // Global scope
+}                                                       //function fun() {
+function fun2() {                                       //  num2 = 20; // Global Scope
+  var output = "";                                      //  if (true) {
+  if (typeof myGlobal != "undefined") {                 //      num3 = 22; // Global Scope
+    output += "myGlobal: " + myGlobal;                  //}
+  }
+  if (typeof oopsGlobal != "undefined") {
+    output += " oopsGlobal: " + oopsGlobal;
+  }
+  console.log(output);
+}
+fun1();
+fun2();
+
+// Global vs. Local Scope in Functions
+const outerWear = "T-Shirt";
+function myOutfit() {
+  let outerWear = "sweater";
+  return outerWear;
+}
+console.log(myOutfit());
+
+// Understanding Undefined Value returned from a Function
+let sum = 0;
+function addThree() {
+  sum = sum + 3;
+}
+function addFive(){
+  sum = sum + 5;
+}
+console.log(addThree());
+console.log(addFive());
+
+//Assignment with a Returned Value
