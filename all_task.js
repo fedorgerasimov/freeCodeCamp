@@ -22,3 +22,16 @@ firstLetterOfLastName = lastName2[0];
 const lastName = "Lovelace";
 const lastLetterOfLastName = lastName[lastName.length - 1];
 const secondToLastLetterOfLastName = lastName[lastName.length - 2];
+
+//Passing Values to Functions with Arguments
+function functionWithArgs(a, b){
+    console.log(a+b);
+  }
+  functionWithArgs(4,5);
+
+  //Return a Value from a Function with Return
+  function timesFive(num){
+    return num*5;
+  }
+  timesFive(5);
+ 
