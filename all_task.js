@@ -467,7 +467,6 @@ const secondTree = myPlants[1].list[1];
 console.log(secondTree);
 
 //Record Collection
-// Setup
 const recordCollection = {
   2548: {
     albumTitle: 'Slippery When Wet',
@@ -500,3 +499,24 @@ function updateRecords(records, id, prop, value) {
   return records;
 }
 console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));
+
+/*Iterate with JavaScript While Loops
+Add the numbers 5 through 0 (inclusive)
+ in descending order to myArray using a while loop.
+ myArray should equal [5, 4, 3, 2, 1, 0].*/
+const myArray = [];
+let i = 5;
+while (i >= 0) {
+  myArray.push(i);
+  i --;
+}
+console.log(myArray);
+
+// ourArray should equal [ 0, 1, 2, 3, 4 ]
+const ourArray = [];
+let i = 0;
+while (i < 5) {
+  ourArray.push(i);
+  i++;
+}
+console.log(ourArray);
