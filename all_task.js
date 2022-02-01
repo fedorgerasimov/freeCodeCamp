@@ -557,7 +557,23 @@ console.log(ourArray);
 
 // odd numbers
 const myArray =[];
-for ( i = 9; i > 0; i-=2) {
+for (let i = 9; i > 0; i-=2) {
   myArray.push(i);
 }
 console.log(myArray);
+
+//Iterate Through an Array with a For Loop
+const arr = [10, 9, 8, 7, 6];
+for (let i = 0; i < arr.length; i++) {
+   console.log(arr[i]);
+}
+// Find the sum of all array elements => 20
+const myArr = [2, 3, 4, 5, 6];
+let total = 0;
+for (let i = 0; i < myArr.length; i++) {
+  total += myArr[i];
+}
+console.log(total);
+
+
+
