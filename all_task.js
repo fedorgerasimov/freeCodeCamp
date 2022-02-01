@@ -520,3 +520,44 @@ while (i < 5) {
   i++;
 }
 console.log(ourArray);
+
+/*Iterate with JavaScript For Loops
+ourArray = [0, 1, 2, 3, 4]. */
+const ourArray = [];
+for (let i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+console.log(ourArray);
+
+/*Iterate Odd Numbers With a For Loop
+We'll start at i = 0 and loop while i < 10. 
+We'll increment i by 2 each loop with i += 2.
+ourArray = [0, 2, 4, 6, 8]
+*/
+const ourArray = [];
+for (let i = 0; i < 10; i += 2) {
+  ourArray.push(i);
+}
+console.log(ourArray);
+
+/*Push the odd numbers from 1 through 9 to myArray using a for loop.
+myArray = [1, 3, 5, 7, 9] */
+const myArray = [];
+for (let i = 1; i < 10; i+=2){
+  myArray.push(i);
+}
+console.log(myArray);
+
+//Count Backwards With a For Loop even numbers
+const ourArray = [];
+for (let i = 10; i > 0; i -= 2) {
+  ourArray.push(i);
+}
+console.log(ourArray);
+
+// odd numbers
+const myArray =[];
+for ( i = 9; i > 0; i-=2) {
+  myArray.push(i);
+}
+console.log(myArray);
