@@ -351,3 +351,51 @@ const myDog = {
 };
 myDog.name = 'Happy Coder';
 console.log(myDog);
+
+// Add New Properties to a JavaScript Object
+const myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+myDog.bark = "woof";
+console.log(myDog);
+
+//Delete Properties from a JavaScript Object
+const myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"],
+  "bark": "woof"
+};
+delete myDog['tails']; // or  myDog.tails
+console.log(myDog);
+
+//Using Objects for Lookups
+function phoneticLookup(val) {
+  let result = "";
+  let lookup = {
+    "alpha": "Adams",
+    "bravo": "Boston",
+    "charlie":"Chicago",
+    "delta":"Denver",
+    "echo":"Easy",
+    "foxtrot":"Frank"
+  };
+  result = lookup[val];
+  return result;
+}
+console.log(phoneticLookup("charlie"));
+
+/*Testing Objects for Properties
+Modify the function checkObj to test if an object passed to the function (obj) contains a specific property (checkProp).
+ If the property is found, return that property's value. If not, return "Not Found".*/
+function checkObj(obj, checkProp) {
+  if (obj.hasOwnProperty(checkProp)) {
+    return obj[checkProp];
+  } else {
+    return "Not Found";
+  }
+}
