@@ -399,3 +399,47 @@ function checkObj(obj, checkProp) {
     return "Not Found";
   }
 }
+const myObj = {  // how can we use hasOwnProperty
+  top: "hat",
+  bottom: "pants"
+};
+myObj.hasOwnProperty("top");
+myObj.hasOwnProperty("middle");
+
+//Manipulating Complex Objects
+const myMusic = [  // This is an array which contains two object inside. 
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true
+  },
+  { "artist": "Bob",
+    "title": "Guitar",
+    "release_year": 1999,
+      "formats": [
+      "CD",
+      "MP3",
+      ]
+  }
+];
+
+// Accessing Nested Objects. 
+const myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+const gloveBoxContents = myStorage.car.inside["glove box"];
+console.log(gloveBoxContents);
