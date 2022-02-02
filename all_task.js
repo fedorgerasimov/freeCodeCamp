@@ -602,3 +602,55 @@ do {
 } while (i < 11);
 console.log(myArray);
 
+
+/* Replace Loops using Recursion
+multiply the first n elements of an array 
+to create the product of those elements.
+умножьте первые n элементов массива, 
+чтобы получить произведение этих элементов.
+*/
+function multiply(arr, n) {
+  let product = 1;
+  for (let i = 0; i < n; i++) {
+    product *= arr[i];
+  }
+  return product;
+}
+console.log(multiply([2,3,4], 3));
+
+//Recursion
+function multiply(arr, n) {
+  if (n <= 0) {
+    return 1;
+  } else {
+    return multiply(arr, n-1) * arr[n-1];  // arr[n-1] - last element in array
+  }
+}
+console.log(multiply([3,4,5,6], 4));
+
+
+/*Write a recursive function, sum(arr, n), 
+that returns the sum of the first n elements of an array arr.
+ */
+//with For loop
+function sum(arr, n) {
+  let sum = 0;
+  for (let i = 0; i < n; i++ ) {
+    sum += arr[i];
+  }
+  return sum;
+}
+console.log(sum([1, 5, 6], 0));
+
+//recursive function
+function sum(arr, n) {
+  if (n <= 0) {
+    return 0;
+  } else {
+    return sum(arr, n -1) + arr[n - 1];
+  }
+}
+console.log(sum([2, 3, 4], 1)); //>=2
+
+
+
