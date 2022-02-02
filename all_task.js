@@ -575,6 +575,30 @@ for (let i = 0; i < myArr.length; i++) {
 }
 console.log(total);
 
-//Nesting For Loops
+/*Nesting For Loops
+The product of all the numbers in the subarrays of the array.
+*/
 
+function multiplyAll(arr) {
+  let product = 1;
+  for (let i = 0; i < arr.length; i++){
+    for(let j = 0; j < arr[i].length; j++) {
+      product *= arr[i][j];
+    }
+  }
+  return product;
+}
+console.log(multiplyAll([[1, 2], [3, 4], [5, 6, 7]]));
+
+/* Iterate with JavaScript Do...While Loops
+Change the while loop in the code to a do...while loop so the loop will push only 
+the number 10 to myArray, and i will be equal to 11 when your code has finished running.
+*/
+const myArray = [];
+let i = 10;
+do {
+  myArray.push(i);
+  i++;
+} while (i < 11);
+console.log(myArray);
 
