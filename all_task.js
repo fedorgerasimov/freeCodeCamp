@@ -567,7 +567,7 @@ const arr = [10, 9, 8, 7, 6];
 for (let i = 0; i < arr.length; i++) {
    console.log(arr[i]);
 }
-// Find the sum of all array elements => 20
+// Find the sum of all elements in array  => 20
 const myArr = [2, 3, 4, 5, 6];
 let total = 0;
 for (let i = 0; i < myArr.length; i++) {
@@ -575,5 +575,6 @@ for (let i = 0; i < myArr.length; i++) {
 }
 console.log(total);
 
+//Nesting For Loops
 
 
