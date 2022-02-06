@@ -698,5 +698,35 @@ function lookUpProfile(name, prop) {
 
 console.log(lookUpProfile("Akira", "likes"));
 
+/*Generate Random Fractions with JavaScript 
+avaScript has a Math.random() function that generates a random
+ decimal number between 0 (inclusive) and 1 (exclusive).
+ Thus Math.random() can return a 0 but never return a 1
+ */
+function randomFraction() {
+    return Math.random();
+}
+console.log(randomFraction());
 
+/*Generate Random Whole Numbers with JavaScript
+return a random whole number between 0 and 9
+*/
+function randomWholeNum() {
+  return Math.floor(Math.random() * 10);
+}
+
+/*Generate Random Whole Numbers within a Range 
+Math.floor(Math.random() * (max - min + 1)) + min
+*/
+function randomRange(myMin, myMax) {
+  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+}
+console.log(Math.floor(Math.random() * (9 - 4 + 1)) + 4);
+
+/*Use the parseInt Function
+*/
+const a = parseInt("007");  // => to the integer 7
+
+/*Use the parseInt Function with a Radix */
+console.log(parseInt('412515', 16));
 
