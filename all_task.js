@@ -825,3 +825,58 @@ function checkSign(num) {
 }
 
 
+/*Use Recursion to Create a Countdown
+ */
+function countup(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const countArray = countup(n - 1);
+    countArray.push(n);
+    return countArray;
+  }
+}
+console.log(countup(5)); // => [1, 2, 3, 4, 5]
+
+function countdown(n){
+  if (n < 1) {
+    return [];
+  }else {
+    let countArray = countdown(n -1);
+    countArray.unshift(n);
+    return countArray;
+  }
+}
+function countdown(n){
+  return n < 1 ? [] : [n, ...countdown(n - 1)];
+}
+console.log(countdown(5)); //=> [ 5, 4, 3, 2, 1 ]
+
+
+/*Use Recursion to Create a Range of Numbers
+We have defined a function named rangeOfNumbers with two parameters.
+The function should return an array of integers which begins with
+a number represented by the startNum parameter and ends with
+a number represented by the endNum parameter. 
+The starting number will always be less than or equal to the ending number. 
+Your function must use recursion by calling itself and not use loops of any kind.
+It should also work for cases where both startNum and endNum are the same. */
+function rangeOfNumbers(startNum, endNum) {
+  if ( endNum - startNum === 0) {
+    return [startNum];
+  } else {
+    let result = rangeOfNumbers(startNum, endNum - 1);
+    result.push(endNum);
+    return result;
+  }
+}
+console.log(rangeOfNumbers(5, 10));
+
+function rangeOfNumbers(startNum, endNum) {
+  return startNum === endNum
+    ? [startNum]
+    : rangeOfNumbers(startNum, endNum - 1).concat(endNum);
+}
+console.log(rangeOfNumbers(5, 10));
+
+
