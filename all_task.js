@@ -2,26 +2,32 @@
 const myStr1 = " I am a \"double quoted\" string inside \"double quotes\"."
 console.log(myStr1);
 
+
 //Quoting Strings with Single Quotes
 const myStr2 = '<a href="http://www.example.com" target="_blank">Link</a>';
 
+
 //Escape Sequences in Strings
 const myStr3 = "FirstLine\n\t\\SecondLine\nThirdLine";
+
 
 //Find the Length of a String
 let lastNameLength = 0;
 const lastName1 = "Lovelace";
 lastNameLength = lastName1.length;
 
+
 //Use Bracket Notation to Find the First Character in a String
 let firstLetterOfLastName = "";
 const lastName2 = "Lovelace";
 firstLetterOfLastName = lastName2[0];
 
+
 //Use Bracket Notation to Find the Last Character in a String or Nth-to-last
 const lastName = "Lovelace";
 const lastLetterOfLastName = lastName[lastName.length - 1];
 const secondToLastLetterOfLastName = lastName[lastName.length - 2];
+
 
 //Passing Values to Functions with Arguments
 function functionWithArgs(a, b){
@@ -29,12 +35,14 @@ function functionWithArgs(a, b){
   }
   functionWithArgs(4,5);
 
-  //Return a Value from a Function with Return
-  function timesFive(num){
-    return num*5;
-  }
-  timesFive(5);
+
+//Return a Value from a Function with Return
+function timesFive(num){
+  return num*5;
+}
+timesFive(5);
  
+
   //Global Scope and Functions // https://forum.freecodecamp.org/t/freecodecamp-challenge-guide-global-scope-and-functions/18193
 const myGlobal = 10;
 function fun1() {
@@ -53,6 +61,7 @@ function fun2() {                                       //  num2 = 20; // Global
 fun1();
 fun2();
 
+
 // Global vs. Local Scope in Functions
 const outerWear = "T-Shirt";
 function myOutfit() {
@@ -60,6 +69,7 @@ function myOutfit() {
   return outerWear;
 }
 console.log(myOutfit());
+
 
 // Understanding Undefined Value returned from a Function
 let sum = 0;
@@ -72,6 +82,7 @@ function addFive(){
 console.log(addThree());
 console.log(addFive());
 
+
 //Assignment with a Returned Value
 let processed = 0;
 function processArg(num) {
@@ -79,6 +90,7 @@ function processArg(num) {
 }
 processed = processArg(7);
 console.log(processed);
+
 
 //Stand in Line
 //Add the number to the end of the array, then remove the first element of the array.
@@ -93,7 +105,8 @@ function nextInLine(arr, item) {
   console.log(nextInLine(testArr, 6));
   console.log("After: " + JSON.stringify(testArr));
 
-  //Use Conditional Logic with If Statements
+
+//Use Conditional Logic with If Statements
   function trueOrFalse(wasThatTrue) {
     if (wasThatTrue){
       return "Yes, that was true";
@@ -101,6 +114,7 @@ function nextInLine(arr, item) {
     return "No, that was false";
 }
 console.log(trueOrFalse(true));
+
 
 //Comparison with the Equality Operator
 function testEqual(val) {
@@ -110,6 +124,7 @@ function testEqual(val) {
     return "Not Equal";
   }
 console.log(testEqual(12));
+
 
 //Else Statements
 function testElse(val) {
@@ -123,6 +138,7 @@ function testElse(val) {
 }
 console.log(testElse(4));
 
+
 //without Else If Statements
 function testElseIf(val) {
   if (val > 10) {
@@ -133,6 +149,7 @@ function testElseIf(val) {
   return "Between 5 and 10";
 }
 console.log(testElseIf(7));
+
 
 //with Else If Statements
 function testElself(val) {
@@ -146,6 +163,7 @@ function testElself(val) {
 }
 console.log(testElself(20));
 
+
 //Logical Order in If Else Statements
 function orderMyLogic(val) {
   if (val < 5) {
@@ -158,9 +176,9 @@ function orderMyLogic(val) {
 }
 console.log(orderMyLogic(11));
 
+
 //Golf Code
 const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
-
 function golfScore(par, strokes) {
   if (strokes ===1) {
     return names[0];
@@ -179,6 +197,7 @@ function golfScore(par, strokes) {
   }
 }
 console.log(golfScore(5, 4));
+
 
 //Selecting from Many Options with Switch Statements
 function caseInSwitch(val) {
@@ -201,6 +220,7 @@ function caseInSwitch(val) {
 }
 console.log(caseInSwitch(3));
 
+
 //Adding a Default Option in Switch Statements
 function switchOfStuff(val) {
   let answer = "";
@@ -220,6 +240,7 @@ function switchOfStuff(val) {
   return answer;
 }
 console.log(switchOfStuff('b'));
+
 
 //Multiple Identical Options in Switch Statements
 function sequentialSizes(val) {
@@ -244,6 +265,7 @@ function sequentialSizes(val) {
   return answer;
 }
 console.log(sequentialSizes(5));
+
 
 //Replacing If Else Chains with Switch
 function chainToSwitch(val) {
@@ -288,11 +310,13 @@ function chainToSwitch(val) {
 }
 console.log(chainToSwitch(100));
 
+
 //Returning Boolean Values from Functions
 function isLess(a, b) {
   return a < b;
 }
 console.log(isLess(10, 15));
+
 
 //Return Early Pattern for Functions
 function abTest(a, b) {
@@ -313,6 +337,7 @@ const testObj = {
 const hatValue = testObj.hat;      
 const shirtValue = testObj.shirt;
 
+
 //Accessing Object Properties with Bracket Notation
 const testObj = {
   "an entree": "hamburger",
@@ -321,6 +346,7 @@ const testObj = {
 };
 const entreeValue = testObj['an entree']; 
 const drinkValue = testObj['the drink']; 
+
 
 //Accessing Object Properties with Variables
 const testObj = {
@@ -341,6 +367,7 @@ const myDog = "Hunter";
 const myBreed = dogs[myDog];
 console.log(myBreed);
 
+
 //Updating Object Properties
 // Setup
 const myDog = {
@@ -352,6 +379,7 @@ const myDog = {
 myDog.name = 'Happy Coder';
 console.log(myDog);
 
+
 // Add New Properties to a JavaScript Object
 const myDog = {
   "name": "Happy Coder",
@@ -361,6 +389,7 @@ const myDog = {
 };
 myDog.bark = "woof";
 console.log(myDog);
+
 
 //Delete Properties from a JavaScript Object
 const myDog = {
@@ -372,6 +401,7 @@ const myDog = {
 };
 delete myDog['tails']; // or  myDog.tails
 console.log(myDog);
+
 
 //Using Objects for Lookups
 function phoneticLookup(val) {
@@ -389,6 +419,7 @@ function phoneticLookup(val) {
 }
 console.log(phoneticLookup("charlie"));
 
+
 /*Testing Objects for Properties
 Modify the function checkObj to test if an object passed to the function (obj) contains a specific property (checkProp).
  If the property is found, return that property's value. If not, return "Not Found".*/
@@ -405,6 +436,7 @@ const myObj = {  // how can we use hasOwnProperty
 };
 myObj.hasOwnProperty("top");
 myObj.hasOwnProperty("middle");
+
 
 //Manipulating Complex Objects
 const myMusic = [  // This is an array which contains two object inside. 
@@ -429,6 +461,7 @@ const myMusic = [  // This is an array which contains two object inside.
   }
 ];
 
+
 // Accessing Nested Objects. 
 const myStorage = {
   "car": {
@@ -443,6 +476,7 @@ const myStorage = {
 };
 const gloveBoxContents = myStorage.car.inside["glove box"];
 console.log(gloveBoxContents);
+
 
 //Accessing Nested Arrays  >= pine
 const myPlants = [
@@ -465,6 +499,7 @@ const myPlants = [
 ];
 const secondTree = myPlants[1].list[1];
 console.log(secondTree);
+
 
 //Record Collection
 const recordCollection = {
@@ -500,6 +535,7 @@ function updateRecords(records, id, prop, value) {
 }
 console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));
 
+
 /*Iterate with JavaScript While Loops
 Add the numbers 5 through 0 (inclusive)
  in descending order to myArray using a while loop.
@@ -512,6 +548,7 @@ while (i >= 0) {
 }
 console.log(myArray);
 
+
 // ourArray should equal [ 0, 1, 2, 3, 4 ]
 const ourArray = [];
 let i = 0;
@@ -521,6 +558,7 @@ while (i < 5) {
 }
 console.log(ourArray);
 
+
 /*Iterate with JavaScript For Loops
 ourArray = [0, 1, 2, 3, 4]. */
 const ourArray = [];
@@ -528,6 +566,7 @@ for (let i = 0; i < 5; i++) {
   ourArray.push(i);
 }
 console.log(ourArray);
+
 
 /*Iterate Odd Numbers With a For Loop
 We'll start at i = 0 and loop while i < 10. 
@@ -540,6 +579,7 @@ for (let i = 0; i < 10; i += 2) {
 }
 console.log(ourArray);
 
+
 /*Push the odd numbers from 1 through 9 to myArray using a for loop.
 myArray = [1, 3, 5, 7, 9] */
 const myArray = [];
@@ -548,12 +588,14 @@ for (let i = 1; i < 10; i+=2){
 }
 console.log(myArray);
 
+
 //Count Backwards With a For Loop even numbers
 const ourArray = [];
 for (let i = 10; i > 0; i -= 2) {
   ourArray.push(i);
 }
 console.log(ourArray);
+
 
 // odd numbers
 const myArray =[];
@@ -562,11 +604,14 @@ for (let i = 9; i > 0; i-=2) {
 }
 console.log(myArray);
 
+
 //Iterate Through an Array with a For Loop
 const arr = [10, 9, 8, 7, 6];
 for (let i = 0; i < arr.length; i++) {
    console.log(arr[i]);
 }
+
+
 // Find the sum of all elements in array  => 20
 const myArr = [2, 3, 4, 5, 6];
 let total = 0;
@@ -575,10 +620,10 @@ for (let i = 0; i < myArr.length; i++) {
 }
 console.log(total);
 
+
 /*Nesting For Loops
 The product of all the numbers in the subarrays of the array.
 */
-
 function multiplyAll(arr) {
   let product = 1;
   for (let i = 0; i < arr.length; i++){
@@ -589,6 +634,7 @@ function multiplyAll(arr) {
   return product;
 }
 console.log(multiplyAll([[1, 2], [3, 4], [5, 6, 7]]));
+
 
 /* Iterate with JavaScript Do...While Loops
 Change the while loop in the code to a do...while loop so the loop will push only 
@@ -617,7 +663,6 @@ function multiply(arr, n) {
   return product;
 }
 console.log(multiply([2,3,4], 3));
-
 //Recursion
 function multiply(arr, n) {
   if (n <= 0) {
@@ -641,7 +686,6 @@ function sum(arr, n) {
   return sum;
 }
 console.log(sum([1, 5, 6], 0));
-
 //recursive function
 function sum(arr, n) {
   if (n <= 0) {
@@ -651,6 +695,7 @@ function sum(arr, n) {
   }
 }
 console.log(sum([2, 3, 4], 1)); //>=2
+
 
 /*Profile Lookup
 The function should check if name is an actual contact's firstName
@@ -686,7 +731,6 @@ const contacts = [
     likes: ["JavaScript", "Gaming", "Foxes"],
   },
 ];
-
 function lookUpProfile(name, prop) {
   for (let i = 0; i < contacts.length; i++) {
     if (contacts[i].firstName === name) {
@@ -695,8 +739,8 @@ function lookUpProfile(name, prop) {
   }
   return "No such contact";
 }
-
 console.log(lookUpProfile("Akira", "likes"));
+
 
 /*Generate Random Fractions with JavaScript 
 avaScript has a Math.random() function that generates a random
@@ -707,13 +751,13 @@ function randomFraction() {
     return Math.random();
 }
 console.log(randomFraction());
-
 /*Generate Random Whole Numbers with JavaScript
 return a random whole number between 0 and 9
 */
 function randomWholeNum() {
   return Math.floor(Math.random() * 10);
 }
+
 
 /*Generate Random Whole Numbers within a Range 
 Math.floor(Math.random() * (max - min + 1)) + min
@@ -723,10 +767,61 @@ function randomRange(myMin, myMax) {
 }
 console.log(Math.floor(Math.random() * (9 - 4 + 1)) + 4);
 
+
 /*Use the parseInt Function
 */
 const a = parseInt("007");  // => to the integer 7
-
 /*Use the parseInt Function with a Radix */
 console.log(parseInt('412515', 16));
+
+
+/*Use the Conditional (Ternary) Operator
+The syntax is a ? b : c, where a is the condition,
+ b is the code to run when the condition returns true,
+and c is the code to run when the condition returns false.
+ */
+function findGreater(a, b) {
+  if(a > b) {
+    return "a is greater";
+  }
+  else {
+    return "b is greater or equal";
+  }
+}
+/* The above function can be re-written using 
+Ternary operators:*/
+function findGreater(a, b) {
+  return a > b ? "a is greater" : "b is greater or equal";
+}
+function checkEqual(a, b) {
+  return a === b ? "Equal" : "Not Equal";
+ }
+
+
+/*Use Multiple Conditional (Ternary) Operators
+ */
+function findGreaterOrEqual(a, b) {
+  if (a === b) {
+    return "a and b are equal";
+  }
+  else if (a > b) {
+    return "a is greater";
+  }
+  else {
+    return "b is greater";
+  }
+}
+/*The above function can be re-written using 
+multiple Ternary operators:*/
+function findGreaterOrEqual(a, b) {
+  return (a === b) ? "a and b are equal" 
+    : (a > b) ? "a is greater" 
+    : "b is greater";
+}
+function checkSign(num) {
+  return (num > 0) ? 'positive'
+    : (num < 0) ? 'negative'
+    : 'zero';
+}
+
 
